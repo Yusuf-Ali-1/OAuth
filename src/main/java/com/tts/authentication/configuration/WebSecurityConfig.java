@@ -36,6 +36,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     @Override
     public UserDetailsService userDetailsService() {
+//        UserDetails only handles one user but you can invoke
+//        the builder and assign to a variable as many times as
+//        you want, the returned methods accepts any amount of
+//        arguments
+
         UserDetails user =
                 User.withDefaultPasswordEncoder()
                         .username("user")
